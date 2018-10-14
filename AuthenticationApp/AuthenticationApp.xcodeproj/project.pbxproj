@@ -16,6 +16,7 @@
 		7E34A7302173F770002583B9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34A72F2173F770002583B9 /* RegistrationViewController.swift */; };
 		7E34A7322173FA5A002583B9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34A7312173FA5A002583B9 /* HomeViewController.swift */; };
 		7E34A7342173FBB1002583B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E34A7332173FBB0002583B9 /* GoogleService-Info.plist */; };
+		7E34A7362173FEF9002583B9 /* WebAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34A7352173FEF9002583B9 /* WebAPIConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7E34A72F2173F770002583B9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		7E34A7312173FA5A002583B9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7E34A7332173FBB0002583B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E34A7352173FEF9002583B9 /* WebAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPIConfiguration.swift; sourceTree = "<group>"; };
 		9E4524A620116CCDF2798566 /* Pods-AuthenticationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenticationApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AuthenticationApp/Pods-AuthenticationApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DF133F0C55A0B1C7BAA4F68B /* libPods-AuthenticationApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AuthenticationApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2E620FE6BC9CAFF652CCB2 /* Pods-AuthenticationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthenticationApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AuthenticationApp/Pods-AuthenticationApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				7E34A71F2173D654002583B9 /* LoginViewController.swift */,
 				7E34A72F2173F770002583B9 /* RegistrationViewController.swift */,
 				7E34A7312173FA5A002583B9 /* HomeViewController.swift */,
+				7E34A7352173FEF9002583B9 /* WebAPIConfiguration.swift */,
 				7E34A7212173D654002583B9 /* Main.storyboard */,
 				7E34A7242173D65E002583B9 /* Assets.xcassets */,
 				7E34A7262173D65E002583B9 /* LaunchScreen.storyboard */,
@@ -193,6 +196,7 @@
 			files = (
 				7E34A7302173F770002583B9 /* RegistrationViewController.swift in Sources */,
 				7E34A7202173D654002583B9 /* LoginViewController.swift in Sources */,
+				7E34A7362173FEF9002583B9 /* WebAPIConfiguration.swift in Sources */,
 				7E34A71E2173D654002583B9 /* AppDelegate.swift in Sources */,
 				7E34A7322173FA5A002583B9 /* HomeViewController.swift in Sources */,
 			);
