@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pPr-zP-rIE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -188,6 +188,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5N-jr-5YD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="815"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Ggq-7i-saE">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="pPr-zP-rIE" customClass="HomeViewController" customModule="AuthenticationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TCB-mz-ONu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-u4-cK6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SoleeklabLogo" translatesAutoresizingMaskIntoConstraints="NO" id="mba-kz-G0t">
+                                        <rect key="frame" x="159.5" y="9" width="56" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="Z9B-Bg-5cm"/>
+                                            <constraint firstAttribute="height" constant="42" id="bdi-UG-M1n"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4c-TM-PP7">
+                                        <rect key="frame" x="297" y="15" width="62" height="30"/>
+                                        <state key="normal" title="Sign Out">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="QYa-A4-NZt"/>
+                                    <constraint firstItem="Q4c-TM-PP7" firstAttribute="centerY" secondItem="mba-kz-G0t" secondAttribute="centerY" id="ReC-qB-tzr"/>
+                                    <constraint firstItem="mba-kz-G0t" firstAttribute="centerY" secondItem="Xxh-u4-cK6" secondAttribute="centerY" constant="2" id="gcM-uE-hUm"/>
+                                    <constraint firstItem="Q4c-TM-PP7" firstAttribute="leading" secondItem="mba-kz-G0t" secondAttribute="trailing" constant="81.5" id="lbr-pz-PGJ"/>
+                                    <constraint firstItem="mba-kz-G0t" firstAttribute="centerX" secondItem="Xxh-u4-cK6" secondAttribute="centerX" id="m2V-Dp-2YZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q4c-TM-PP7" secondAttribute="trailing" constant="16" id="y5O-uo-3Nu"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwZ-nh-QMc">
+                                <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yet-hQ-Q0z">
+                                <rect key="frame" x="139" y="461.5" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Z8u-Bx-y9s"/>
+                                    <constraint firstAttribute="width" constant="97" id="cLz-TM-vfH"/>
+                                </constraints>
+                                <state key="normal" title="Show Country">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NwZ-nh-QMc" firstAttribute="leading" secondItem="Uo9-Ao-LOr" secondAttribute="leading" id="7PZ-nX-Zvb"/>
+                            <constraint firstItem="Yet-hQ-Q0z" firstAttribute="centerX" secondItem="TCB-mz-ONu" secondAttribute="centerX" id="8MQ-I2-iIf"/>
+                            <constraint firstItem="NwZ-nh-QMc" firstAttribute="trailing" secondItem="Uo9-Ao-LOr" secondAttribute="trailing" id="9or-NM-0NF"/>
+                            <constraint firstItem="Xxh-u4-cK6" firstAttribute="trailing" secondItem="Uo9-Ao-LOr" secondAttribute="trailing" id="G1l-qb-iQt"/>
+                            <constraint firstItem="NwZ-nh-QMc" firstAttribute="centerX" secondItem="TCB-mz-ONu" secondAttribute="centerX" id="LGy-ab-R2S"/>
+                            <constraint firstItem="Xxh-u4-cK6" firstAttribute="top" secondItem="Uo9-Ao-LOr" secondAttribute="top" id="RfM-6T-HNu"/>
+                            <constraint firstItem="Xxh-u4-cK6" firstAttribute="leading" secondItem="Uo9-Ao-LOr" secondAttribute="leading" id="YMW-Tx-w9b"/>
+                            <constraint firstItem="NwZ-nh-QMc" firstAttribute="centerY" secondItem="TCB-mz-ONu" secondAttribute="centerY" id="dlo-jc-5Lq"/>
+                            <constraint firstItem="Yet-hQ-Q0z" firstAttribute="top" secondItem="NwZ-nh-QMc" secondAttribute="bottom" constant="20" id="nMx-Il-Qwj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Uo9-Ao-LOr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idQ-Gr-szM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197.5999999999999" y="508.69565217391306"/>
         </scene>
     </scenes>
     <resources>

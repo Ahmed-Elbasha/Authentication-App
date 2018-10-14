@@ -13,6 +13,7 @@
 		7E34A7252173D65E002583B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E34A7242173D65E002583B9 /* Assets.xcassets */; };
 		7E34A7282173D65E002583B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E34A7262173D65E002583B9 /* LaunchScreen.storyboard */; };
 		7E34A7302173F770002583B9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34A72F2173F770002583B9 /* RegistrationViewController.swift */; };
+		7E34A7322173FA5A002583B9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34A7312173FA5A002583B9 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7E34A7272173D65E002583B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E34A7292173D65E002583B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E34A72F2173F770002583B9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		7E34A7312173FA5A002583B9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7E34A71D2173D654002583B9 /* AppDelegate.swift */,
 				7E34A71F2173D654002583B9 /* LoginViewController.swift */,
 				7E34A72F2173F770002583B9 /* RegistrationViewController.swift */,
+				7E34A7312173FA5A002583B9 /* HomeViewController.swift */,
 				7E34A7212173D654002583B9 /* Main.storyboard */,
 				7E34A7242173D65E002583B9 /* Assets.xcassets */,
 				7E34A7262173D65E002583B9 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				7E34A7302173F770002583B9 /* RegistrationViewController.swift in Sources */,
 				7E34A7202173D654002583B9 /* LoginViewController.swift in Sources */,
 				7E34A71E2173D654002583B9 /* AppDelegate.swift in Sources */,
+				7E34A7322173FA5A002583B9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
