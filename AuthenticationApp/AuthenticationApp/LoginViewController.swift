@@ -33,10 +33,29 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func signInButtonPressed(_ sender: Any) {
-        
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                if error == nil {
+                    let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    self.present(homeVC!, animated: true, completion: nil)
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
+        let registerVC = self.storyboard?.instantiateViewController(withIdentifier: "Registration")
+        self.present(registerVC!, animated: true, completion: nil)
     }
 }
 

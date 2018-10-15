@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="AuthenticationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="AuthenticationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
         <!--Registration View Controller-->
         <scene sceneID="laO-GI-Emd">
             <objects>
-                <viewController storyboardIdentifier="RegistrationViewController" id="inD-hy-QYh" customClass="RegistrationViewController" customModule="AuthenticationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Registration" id="inD-hy-QYh" customClass="RegistrationViewController" customModule="AuthenticationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R3l-bS-EHT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,7 @@
         <!--Home View Controller-->
         <scene sceneID="Ggq-7i-saE">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="pPr-zP-rIE" customClass="HomeViewController" customModule="AuthenticationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="pPr-zP-rIE" customClass="HomeViewController" customModule="AuthenticationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCB-mz-ONu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
