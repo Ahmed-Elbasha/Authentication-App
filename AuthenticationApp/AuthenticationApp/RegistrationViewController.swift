@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationViewController: UIViewController {
 
@@ -33,9 +34,29 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func createUserButtonPressed(_ sender: Any) {
+        if (emailAddressTextField.text != "" && passwordTextField.text != "" && confirmPasswordTextField.text != "") &&
+            (passwordTextField.text! == confirmPasswordTextField.text!) {
+            Auth.auth().createUser(withEmail: emailAddressTextField.text!, password: passwordTextField.text!) { (user, error) in
+                if user != nil && error == nil {
+                    let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    self.present(homeVC!, animated: true, completion: nil)
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        //let loginVC = storyboard?.instantiateViewController(withIdentifier: "<#T##String#>")
+        let loginVC = storyboard?.instantiateViewController(withIdentifier: "Login")
+        self.present(loginVC!, animated: true, completion: nil)
     }
 }
