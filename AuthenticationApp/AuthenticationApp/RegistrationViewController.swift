@@ -10,21 +10,32 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
 
+    @IBOutlet weak var emailAddressTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Optimize registerButton style.
+        registerButton.backgroundColor = UIColor.white
+        registerButton.layer.cornerRadius = 5
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.borderColor = UIColor.black.cgColor
+        
+        // Optimize loginButton style.
+        loginButton.backgroundColor = UIColor.white
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.borderWidth = 1
+        loginButton.layer.borderColor = UIColor.black.cgColor
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func createUserButtonPressed(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        //let loginVC = storyboard?.instantiateViewController(withIdentifier: "<#T##String#>")
+    }
 }

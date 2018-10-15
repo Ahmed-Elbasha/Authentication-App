@@ -155,6 +155,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createUserButtonPressed:" destination="inD-hy-QYh" eventType="touchUpInside" id="tRa-hV-2a5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vm-re-u6U">
                                 <rect key="frame" x="141.5" y="441" width="92" height="35"/>
@@ -165,6 +168,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="inD-hy-QYh" eventType="touchUpInside" id="7fW-fh-j9n"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password." textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="koP-kT-BGz">
                                 <rect key="frame" x="85" y="286" width="205" height="30"/>
@@ -196,6 +202,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XwC-W8-FdT"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="UAO-Tc-pRF" id="z5B-kR-Dbv"/>
+                        <outlet property="emailAddressTextField" destination="HR5-ux-AwI" id="P19-es-7R6"/>
+                        <outlet property="loginButton" destination="7Vm-re-u6U" id="am5-KO-6ZV"/>
+                        <outlet property="passwordTextField" destination="koP-kT-BGz" id="apn-1I-XXz"/>
+                        <outlet property="registerButton" destination="Zkk-tf-9PM" id="qJ3-8x-hW1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5N-jr-5YD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
