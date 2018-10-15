@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A980BE188FCB9737B9D6F9E /* libPods-AuthenticationApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF133F0C55A0B1C7BAA4F68B /* libPods-AuthenticationApp.a */; };
+		7E2CC95A2174EBA30073494E /* HomePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2CC9592174EBA30073494E /* HomePickerDelegate.swift */; };
 		7E34A71E2173D654002583B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34A71D2173D654002583B9 /* AppDelegate.swift */; };
 		7E34A7202173D654002583B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34A71F2173D654002583B9 /* LoginViewController.swift */; };
 		7E34A7232173D654002583B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E34A7212173D654002583B9 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E2CC9592174EBA30073494E /* HomePickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePickerDelegate.swift; sourceTree = "<group>"; };
 		7E34A71A2173D654002583B9 /* AuthenticationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthenticationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E34A71D2173D654002583B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E34A71F2173D654002583B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +50,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E2CC9572174EB6B0073494E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7E2CC9582174EB830073494E /* HomeViewController */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		7E2CC9582174EB830073494E /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E2CC9592174EBA30073494E /* HomePickerDelegate.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
 		7E34A7112173D654002583B9 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +87,7 @@
 		7E34A71C2173D654002583B9 /* AuthenticationApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E2CC9572174EB6B0073494E /* Delegate */,
 				7E34A71D2173D654002583B9 /* AppDelegate.swift */,
 				7E34A71F2173D654002583B9 /* LoginViewController.swift */,
 				7E34A72F2173F770002583B9 /* RegistrationViewController.swift */,
@@ -195,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E34A7302173F770002583B9 /* RegistrationViewController.swift in Sources */,
+				7E2CC95A2174EBA30073494E /* HomePickerDelegate.swift in Sources */,
 				7E34A7202173D654002583B9 /* LoginViewController.swift in Sources */,
 				7E34A7362173FEF9002583B9 /* WebAPIConfiguration.swift in Sources */,
 				7E34A71E2173D654002583B9 /* AppDelegate.swift in Sources */,

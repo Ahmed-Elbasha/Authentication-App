@@ -237,6 +237,9 @@
                                         <state key="normal" title="Sign Out">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signOutButtonPressed:" destination="pPr-zP-rIE" eventType="touchUpInside" id="yMI-pF-01H"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -253,20 +256,23 @@
                                 <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yet-hQ-Q0z">
-                                <rect key="frame" x="139" y="461.5" width="97" height="30"/>
+                                <rect key="frame" x="135" y="461.5" width="111" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Z8u-Bx-y9s"/>
-                                    <constraint firstAttribute="width" constant="97" id="cLz-TM-vfH"/>
+                                    <constraint firstAttribute="height" constant="35" id="Z8u-Bx-y9s"/>
+                                    <constraint firstAttribute="width" constant="111" id="cLz-TM-vfH"/>
                                 </constraints>
                                 <state key="normal" title="Show Country">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="showCountryButtonPressed:" destination="pPr-zP-rIE" eventType="touchUpInside" id="FHz-T4-ojz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NwZ-nh-QMc" firstAttribute="leading" secondItem="Uo9-Ao-LOr" secondAttribute="leading" id="7PZ-nX-Zvb"/>
-                            <constraint firstItem="Yet-hQ-Q0z" firstAttribute="centerX" secondItem="TCB-mz-ONu" secondAttribute="centerX" id="8MQ-I2-iIf"/>
+                            <constraint firstItem="Yet-hQ-Q0z" firstAttribute="centerX" secondItem="TCB-mz-ONu" secondAttribute="centerX" constant="3" id="8MQ-I2-iIf"/>
                             <constraint firstItem="NwZ-nh-QMc" firstAttribute="trailing" secondItem="Uo9-Ao-LOr" secondAttribute="trailing" id="9or-NM-0NF"/>
                             <constraint firstItem="Xxh-u4-cK6" firstAttribute="trailing" secondItem="Uo9-Ao-LOr" secondAttribute="trailing" id="G1l-qb-iQt"/>
                             <constraint firstItem="NwZ-nh-QMc" firstAttribute="centerX" secondItem="TCB-mz-ONu" secondAttribute="centerX" id="LGy-ab-R2S"/>
@@ -277,6 +283,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uo9-Ao-LOr"/>
                     </view>
+                    <connections>
+                        <outlet property="countriesPickerView" destination="NwZ-nh-QMc" id="pHm-NF-tQv"/>
+                        <outlet property="showCountryButton" destination="Yet-hQ-Q0z" id="nye-tS-PCA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idQ-Gr-szM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

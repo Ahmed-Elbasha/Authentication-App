@@ -1,0 +1,28 @@
+//
+//  HomePickerDelegate.swift
+//  AuthenticationApp
+//
+//  Created by Ahmed Elbasha on 10/15/18.
+//  Copyright © 2018 Ahmed Elbasha. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return ""
+    }
+}
