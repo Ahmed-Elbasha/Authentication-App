@@ -60,14 +60,17 @@ class HomeViewController: UIViewController {
     }
     
     func fetchCountriesNames(fromWebApiService webApi: String, _ handler: @escaping(_ status: Bool) -> () ) {
-        Alamofire.request(URL(fileURLWithPath: webApi)).responseJSON { (response) in
+        Alamofire.request(webApi).responseJSON { (response) in
             guard let rootJsonObject = response.result.value as? Dictionary<String, AnyObject> else {return}
-            
-            let countries = rootJsonObject["result"] as? [Dictionary<String, AnyObject>]
-            
-            for country in countries! {
-                let countryName = country["name"] as! String
-                self.countriesArray.append(countryName)
+            if let countries = rootJsonObject["result"] as? [Dictionary<String, AnyObject>] {
+                for (index, country) in countries.enumerated() {
+                    if let countryName = country["name"] as? String {
+                        self.countriesArray.append(countryName)
+                    }
+                    if index == countries.count - 1 {
+                        handler(true)
+                    }
+                }
             }
         }
     }
