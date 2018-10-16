@@ -9,5 +9,5 @@
 import Foundation
 
 func generateGetAllCountriesWebApi() -> String {
-    return "https://restcountries.eu/rest/v2/all"
+    return "GET https://api.printful.com/countries"
 }

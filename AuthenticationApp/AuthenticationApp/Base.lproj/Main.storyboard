@@ -254,6 +254,10 @@
                             </view>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwZ-nh-QMc">
                                 <rect key="frame" x="0.0" y="225.5" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="KL8-GI-cHq"/>
+                                    <constraint firstAttribute="width" constant="375" id="vCh-yB-bax"/>
+                                </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yet-hQ-Q0z">
                                 <rect key="frame" x="135" y="461.5" width="111" height="35"/>

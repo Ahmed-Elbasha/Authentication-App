@@ -15,8 +15,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var countriesPickerView: UIPickerView!
     @IBOutlet weak var showCountryButton: UIButton!
     
-    var countries = [String]()
+    var countriesArray = [String]()
     var countriesWebServiceApi = generateGetAllCountriesWebApi()
+    var selectedCountry: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,18 +31,51 @@ class HomeViewController: UIViewController {
         showCountryButton.layer.borderColor = UIColor.black.cgColor
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        fetchCountriesNames(fromWebApiService: countriesWebServiceApi) { (complete) in
+            if complete {
+                self.countriesPickerView.reloadAllComponents()
+                print("Data Fetching Successfull")
+            } else {
+                print("Data Fetching Failed.")
+                return
+            }
+        }
+    }
+    
     func setDelegateForUIControls() {
         self.countriesPickerView.delegate = self
         self.countriesPickerView.dataSource = self
     }
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
-    func fetchCountriesNames(fromWebApiService webApi: String) {
-        
+    func fetchCountriesNames(fromWebApiService webApi: String, _ handler: @escaping(_ status: Bool) -> () ) {
+        Alamofire.request(URL(fileURLWithPath: webApi)).responseJSON { (response) in
+            guard let rootJsonObject = response.result.value as? Dictionary<String, AnyObject> else {return}
+            
+            let countries = rootJsonObject["result"] as? [Dictionary<String, AnyObject>]
+            
+            for country in countries! {
+                let countryName = country["name"] as! String
+                self.countriesArray.append(countryName)
+            }
+        }
     }
     
     @IBAction func showCountryButtonPressed(_ sender: Any) {
+        let alertController = UIAlertController(title: "", message: "\(selectedCountry ?? "")", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
