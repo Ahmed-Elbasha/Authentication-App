@@ -13,7 +13,6 @@ import Firebase
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var countriesPickerView: UIPickerView!
-    @IBOutlet weak var showCountryButton: UIButton!
     
     var countriesArray = [String]()
     var countriesWebServiceApi = generateGetAllCountriesWebApi()
@@ -23,12 +22,6 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setDelegateForUIControls()
-        
-        // Optimize showCountriesButton style.
-        showCountryButton.backgroundColor = UIColor.white
-        showCountryButton.layer.cornerRadius = 5
-        showCountryButton.layer.borderWidth = 1
-        showCountryButton.layer.borderColor = UIColor.black.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,10 +68,4 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @IBAction func showCountryButtonPressed(_ sender: Any) {
-        let alertController = UIAlertController(title: "", message: "\(selectedCountry ?? "\(countriesArray[0])")", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(defaultAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
 }

@@ -31,6 +31,13 @@ class LoginViewController: UIViewController {
         registerButton.layer.borderWidth = 1
         registerButton.layer.borderColor = UIColor.black.cgColor
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
 
     @IBAction func signInButtonPressed(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" {

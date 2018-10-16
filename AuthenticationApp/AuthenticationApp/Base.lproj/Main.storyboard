@@ -259,37 +259,21 @@
                                     <constraint firstAttribute="width" constant="375" id="vCh-yB-bax"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yet-hQ-Q0z">
-                                <rect key="frame" x="135" y="461.5" width="111" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Z8u-Bx-y9s"/>
-                                    <constraint firstAttribute="width" constant="111" id="cLz-TM-vfH"/>
-                                </constraints>
-                                <state key="normal" title="Show Country">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="showCountryButtonPressed:" destination="pPr-zP-rIE" eventType="touchUpInside" id="FHz-T4-ojz"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NwZ-nh-QMc" firstAttribute="leading" secondItem="Uo9-Ao-LOr" secondAttribute="leading" id="7PZ-nX-Zvb"/>
-                            <constraint firstItem="Yet-hQ-Q0z" firstAttribute="centerX" secondItem="TCB-mz-ONu" secondAttribute="centerX" constant="3" id="8MQ-I2-iIf"/>
                             <constraint firstItem="NwZ-nh-QMc" firstAttribute="trailing" secondItem="Uo9-Ao-LOr" secondAttribute="trailing" id="9or-NM-0NF"/>
                             <constraint firstItem="Xxh-u4-cK6" firstAttribute="trailing" secondItem="Uo9-Ao-LOr" secondAttribute="trailing" id="G1l-qb-iQt"/>
                             <constraint firstItem="NwZ-nh-QMc" firstAttribute="centerX" secondItem="TCB-mz-ONu" secondAttribute="centerX" id="LGy-ab-R2S"/>
                             <constraint firstItem="Xxh-u4-cK6" firstAttribute="top" secondItem="Uo9-Ao-LOr" secondAttribute="top" id="RfM-6T-HNu"/>
                             <constraint firstItem="Xxh-u4-cK6" firstAttribute="leading" secondItem="Uo9-Ao-LOr" secondAttribute="leading" id="YMW-Tx-w9b"/>
                             <constraint firstItem="NwZ-nh-QMc" firstAttribute="centerY" secondItem="TCB-mz-ONu" secondAttribute="centerY" id="dlo-jc-5Lq"/>
-                            <constraint firstItem="Yet-hQ-Q0z" firstAttribute="top" secondItem="NwZ-nh-QMc" secondAttribute="bottom" constant="20" id="nMx-Il-Qwj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uo9-Ao-LOr"/>
                     </view>
                     <connections>
                         <outlet property="countriesPickerView" destination="NwZ-nh-QMc" id="pHm-NF-tQv"/>
-                        <outlet property="showCountryButton" destination="Yet-hQ-Q0z" id="nye-tS-PCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idQ-Gr-szM" userLabel="First Responder" sceneMemberID="firstResponder"/>
