@@ -76,7 +76,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func showCountryButtonPressed(_ sender: Any) {
-        let alertController = UIAlertController(title: "", message: "\(selectedCountry ?? "")", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "", message: "\(selectedCountry ?? "\(countriesArray[0])")", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)

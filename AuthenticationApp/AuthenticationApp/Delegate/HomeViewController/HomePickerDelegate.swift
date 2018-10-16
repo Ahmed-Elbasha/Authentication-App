@@ -19,7 +19,7 @@ extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let currentCountry = countriesArray[row]
+        let currentCountry = countriesArray[pickerView.selectedRow(inComponent: 0)]
         selectedCountry = currentCountry
     }
     
