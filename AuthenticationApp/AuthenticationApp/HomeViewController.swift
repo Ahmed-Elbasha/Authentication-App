@@ -12,11 +12,10 @@ import Firebase
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var countriesPickerView: UIPickerView!
+    @IBOutlet weak var countriesTableView: UITableView!
     
     var countriesArray = [String]()
     var countriesWebServiceApi = generateGetAllCountriesWebApi()
-    var selectedCountry: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +28,7 @@ class HomeViewController: UIViewController {
         
         fetchCountriesNames(fromWebApiService: countriesWebServiceApi) { (complete) in
             if complete {
-                self.countriesPickerView.reloadAllComponents()
+                self.countriesTableView.reloadData()
                 print("Data Fetching Successfull")
             } else {
                 print("Data Fetching Failed.")
@@ -39,8 +38,8 @@ class HomeViewController: UIViewController {
     }
     
     func setDelegateForUIControls() {
-        self.countriesPickerView.delegate = self
-        self.countriesPickerView.dataSource = self
+        self.countriesTableView.delegate = self
+        self.countriesTableView.dataSource = self
     }
     
     @IBAction func signOutButtonPressed(_ sender: Any) {
